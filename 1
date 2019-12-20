@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main ()
+{
+int i, j, x, n, k;
+int mas[] = {7, 42, -55, 15, -3};
+n = sizeof(mas) / sizeof (int);
+
+  for (k=0; k<n; k++) {
+        printf ("%d ", mas[k]);    
+  }
+ printf ("\n");
+  for (i=0; i<n; i++) {
+    j=i;
+    x=mas[i];
+     while (j>0 && x<mas[j-1]){
+        mas[j]=mas[j-1];
+        j --;
+        }
+  
+      mas[j]=x;
+  }
+  for (k=0; k<n; k++) {
+        printf ("%d ", mas[k]);    
+  }
+}
+
+
